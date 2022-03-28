@@ -1,0 +1,19 @@
+data Color
+    red :: Int
+    blue :: Int
+    green :: Int;
+
+invert :: Color -> Color;
+invert = let red blue green in 255 red - 255 blue - 255 green - Color end;
+
+isEven :: Int -> Int;
+isEven
+    | dup 0 == = true
+    | else = dup 1 - isOdd;
+
+isOdd :: Int -> Int;
+isOdd
+    | dup 0 == = false
+    | else = dup 1 - isEven;
+
+main = 1 isEven put;
